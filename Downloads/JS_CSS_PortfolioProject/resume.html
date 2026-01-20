@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahd Zaafar Khan - Resume | Java Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.5cm;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 20px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        .resume-container {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #ff6b6b;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .title {
+            font-size: 1.3em;
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95em;
+            color: #555;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary {
+            text-align: justify;
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skill-category li {
+            padding: 3px 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .skill-category li:before {
+            content: "▸ ";
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        
+        .experience-item:last-child, .project-item:last-child {
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        .job-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title, .project-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .company, .project-tech {
+            color: #ff6b6b;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        .duration {
+            color: #777;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+        
+        .job-description, .project-description {
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+        
+        .job-description ul, .project-description ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .job-description li, .project-description li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .education-item h4 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .education-item .university {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .cert-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #ff6b6b;
+        }
+        
+        .cert-item strong {
+            color: #2c3e50;
+        }
+        
+        .achievements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .achievements li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .achievements li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+        
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            background: #ee5a6f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="window.print()">
+        <i class="fas fa-download"></i> Download PDF
+    </button>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Fahd Zaafar Khan</h1>
+            <div class="title">Java Full Stack Developer</div>
+            <div class="contact-info">
+                <span>📧 fahadzaafarkhan.freelance@gmail.com</span>
+                <span>📱 +91-7728855804 | +91-9493975693</span>
+                <span>📍 Hyderabad, India</span>
+                <span>🔗 github.com/iamfzk</span>
+                <span>💼 linkedin.com/in/fahd-zaafar-khan-ba46371b8</span>
+            </div>
+            <div style="margin-top: 10px; color: #777; font-size: 0.9em;">
+                Willing to Relocate | Immediate Joiner
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary">
+                <p>I'm a Java Full-Stack Developer with extensive experience building scalable applications for banking, insurance, healthcare, and e-commerce industries. I excel at developing microservices using Java, Spring Boot, and Spring Cloud, and deploying them on cloud platforms like AWS, GCP, and Azure. My expertise includes creating responsive frontends with React, Angular, and Tailwind CSS, and optimizing databases like PostgreSQL, MongoDB, and Redis.</p>
+                <p style="margin-top: 15px;">I'm skilled in DevOps tools such as Linux, Docker, Kubernetes, Jenkins, and Terraform, ensuring seamless CI/CD pipelines. I'm passionate about writing clean code, achieving high test coverage with JUnit, Mockito, and Cypress, and implementing real-time systems with Kafka. I enjoy mentoring teams, contributing to open-source projects, and winning hackathons. My goal is to deliver user-friendly, high-performance applications that drive business success.</p>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Backend Development</h4>
+                    <ul>
+                        <li>Java, Spring Boot</li>
+                        <li>Spring MVC, Spring Security</li>
+                        <li>Hibernate, REST APIs</li>
+                        <li>GraphQL, Microservices</li>
+                        <li>Spring Cloud</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <ul>
+                        <li>React.js, Angular</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Tailwind CSS</li>
+                        <li>HTML5, CSS3</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <ul>
+                        <li>PostgreSQL, MySQL</li>
+                        <li>Oracle, MongoDB</li>
+                        <li>Cassandra, Redis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>DevOps & Cloud</h4>
+                    <ul>
+                        <li>AWS (EKS, ECS, Lambda)</li>
+                        <li>GCP, Azure</li>
+                        <li>Docker, Kubernetes</li>
+                        <li>Jenkins, Terraform</li>
+                        <li>Linux, CI/CD</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Testing Tools</h4>
+                    <ul>
+                        <li>JUnit, Mockito</li>
+                        <li>Cypress, Playwright</li>
+                        <li>JaCoCo, Selenium</li>
+                        <li>Karate, GTF</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Other Technologies</h4>
+                    <ul>
+                        <li>Apache Kafka, RabbitMQ</li>
+                        <li>TensorFlow, LangChain</li>
+                        <li>Git, Swagger, Postman</li>
+                        <li>SonarQube, JIRA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Java Full-Stack Developer</div>
+                        <div class="company">Lince Soft Solutions Pvt. Ltd., Hyderabad</div>
+                    </div>
+                    <div class="duration">September 2022 - August 2025</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Developed microservices with Spring Boot and Spring Cloud for flexible, scalable systems.</li>
+                        <li>Implemented secure APIs using Spring Security, JWT, and OAuth2 to protect user data.</li>
+                        <li>Integrated Apache Kafka and RabbitMQ for real-time messaging, improving system performance by 30%.</li>
+                        <li>Deployed applications on AWS and GCP using Docker, Kubernetes, and Terraform, achieving 99.9% uptime.</li>
+                        <li>Automated CI/CD pipelines with Jenkins and GitHub Actions, reducing deployment time by 50%.</li>
+                        <li>Built responsive frontends with React, Angular, and Tailwind CSS for seamless user experiences.</li>
+                        <li>Mentored junior developers and conducted code reviews to achieve 90% code quality via SonarQube.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">Banking Management System</div>
+                        <div class="project-tech">Java, Spring Boot, Angular 17, PostgreSQL, Kafka, AWS, Docker, Kubernetes</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Developed secure login and fund transfer modules using Spring Security and JWT to ensure data integrity.</li>
+                        <li>Optimized database queries with Redis caching, improving response times by 35%.</li>
+                        <li>Deployed the application on AWS EKS using Jenkins and Terraform for automated, zero-downtime updates.</li>
+                        <li>Built a responsive Angular frontend with reusable components for a consistent user interface.</li>
+                        <li>Integrated Kafka for real-time transaction notifications, enhancing user experience.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">Insurance Policy Management System</div>
+                        <div class="project-tech">Java, Spring Boot, Guidewire, Gosu, TensorFlow, LangChain, AWS, PostgreSQL</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Customized Guidewire platforms (PolicyCenter, BillingCenter, ClaimCenter) using Gosu to meet client requirements.</li>
+                        <li>Developed RESTful APIs with Spring Boot and Hibernate for seamless integration with external systems.</li>
+                        <li>Implemented AI-driven fraud detection using TensorFlow and LangChain, improving accuracy by 25%.</li>
+                        <li>Deployed on AWS EKS with Docker and Kubernetes, achieving 95% test coverage using GTF, Selenium, and Karate.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">E-Commerce Platform</div>
+                        <div class="project-tech">Java, Spring Boot, React.js, MongoDB, Redis, AWS</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Built microservices with Java and Spring Boot for product catalogs, carts, and payment processing.</li>
+                        <li>Reduced API latency by 40% using Google Guava and Redis caching for faster browsing.</li>
+                        <li>Created a responsive React frontend with Tailwind CSS, achieving 95% user satisfaction in surveys.</li>
+                        <li>Automated deployments with Jenkins for zero-downtime updates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">Healthcare Appointment System</div>
+                        <div class="project-tech">Java, Spring Boot, Angular, MongoDB, Kafka, AWS, Docker, Kubernetes</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Developed a microservices platform with Spring Boot for appointment scheduling and EHR integration.</li>
+                        <li>Created secure RESTful APIs with OAuth2 to protect patient data.</li>
+                        <li>Built a responsive Angular frontend with Tailwind CSS for cross-device compatibility.</li>
+                        <li>Implemented Kafka for real-time notifications, increasing patient engagement by 30%.</li>
+                        <li>Deployed on AWS EKS with Docker and Kubernetes, achieving 99.9% uptime.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h4>B.Tech in Computer Science & Engineering</h4>
+                <div class="university">Dr. A.P.J. Abdul Kalam Technical University, Lucknow</div>
+                <div style="color: #777; margin-top: 5px;">First Division</div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications">
+                <div class="cert-item"><strong>AWS Certified Solutions Architect Associate</strong> - Udemy</div>
+                <div class="cert-item"><strong>Certified Kubernetes Administrator</strong> - Udemy</div>
+                <div class="cert-item"><strong>Full Stack Java Developer</strong> - Udemy</div>
+                <div class="cert-item"><strong>Azure Data Fundamentals</strong> - Udemy</div>
+                <div class="cert-item"><strong>Google Cloud Professional Developer</strong> - Udemy</div>
+                <div class="cert-item"><strong>Oracle Cloud Infrastructure Developer</strong> - Udemy</div>
+                <div class="cert-item"><strong>Certified ScrumMaster</strong> - Udemy</div>
+                <div class="cert-item"><strong>JavaScript Algorithms and Data Structures</strong> - Udemy</div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="section">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements">
+                <ul>
+                    <li>Named Employee of the Year at Lince Soft Solutions for outstanding contributions to microservices architecture.</li>
+                    <li>Won Best Innovation Award at CodeStreet Hackathon for a cloud-native payment app.</li>
+                    <li>Recognized for mentoring 2 junior developers, improving team productivity by 15%.</li>
+                    <li>Awarded Top Performer for delivering e-commerce platform 10% ahead of schedule.</li>
+                    <li>Secured 1st place in university coding competition for solving complex DSA problems.</li>
+                    <li>Received appreciation for optimizing banking system performance by 40%.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
