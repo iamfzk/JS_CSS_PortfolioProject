@@ -612,11 +612,12 @@ section {
 .about-container .left-about p {
   line-height: 2;
   padding: 0;
-  color: var(--color-grey-1);
+  color: var(--color-white);
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.01em;
+  opacity: 0.9;
 }
 
 .about-container .left-about h4 {
@@ -890,10 +891,11 @@ section {
 }
 
 .timeline .timeline-item p {
-  color: var(--color-grey-2);
+  color: var(--color-white);
   line-height: 1.9;
   font-size: 1rem;
   font-weight: 400;
+  opacity: 0.9;
 }
 
 .port-text {
@@ -1179,9 +1181,10 @@ section {
   margin: 1.5rem 0;
   line-height: 2;
   font-size: 1.1rem;
-  color: var(--color-grey-1);
+  color: var(--color-white);
   font-weight: 400;
   letter-spacing: 0.01em;
+  opacity: 0.9;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item {
