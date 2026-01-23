@@ -470,9 +470,12 @@ section {
   margin: 2rem 0;
   line-height: 1.8;
   font-size: 1.1rem;
-  color: var(--color-grey-1);
+  color: var(--color-white);
   max-width: 600px;
   animation: fadeInUp 1s ease-in-out 0.7s backwards;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
 }
 
 .header-content .right-header .social-icons {
